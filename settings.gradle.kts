@@ -1,1 +1,1 @@
-rootProject.name = "HotKitchenTestProject"
+rootProject.name = "HotKitchenTest"

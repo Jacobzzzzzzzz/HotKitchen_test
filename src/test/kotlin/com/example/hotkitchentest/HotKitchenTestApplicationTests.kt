@@ -1,10 +1,10 @@
-package com.example.hotkitchentestproject
+package com.example.hotkitchentest
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
 @SpringBootTest
-class HotKitchenTestProjectApplicationTests {
+class HotKitchenTestApplicationTests {
 
     @Test
     fun contextLoads() {
