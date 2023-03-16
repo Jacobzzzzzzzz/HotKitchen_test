@@ -1,7 +1,6 @@
 package com.example.hotkitchentest.model.entity
 
 import jakarta.persistence.*
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder
 import java.io.Serializable
 import java.time.LocalDateTime
 
@@ -11,6 +10,7 @@ abstract class AbstractEntity : Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     var id: Long = 0
         private set
+
     @Column(nullable = false, updatable = false)
     val createdAt: LocalDateTime = LocalDateTime.now()
 

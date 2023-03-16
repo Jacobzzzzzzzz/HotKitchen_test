@@ -1,7 +1,6 @@
-package com.example.hotkitchentest.model.dto
+package com.example.hotkitchentest.model.dto.request
 
 import com.example.hotkitchentest.model.entity.Booking
-import jakarta.persistence.Column
 
 class BookingRequest (
     var title:String,

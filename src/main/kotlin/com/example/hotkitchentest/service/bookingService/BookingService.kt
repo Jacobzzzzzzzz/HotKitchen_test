@@ -1,6 +1,6 @@
-package com.example.hotkitchentest.service
+package com.example.hotkitchentest.service.bookingService
 
-import com.example.hotkitchentest.model.dto.BookingRequest
+import com.example.hotkitchentest.model.dto.request.BookingRequest
 import com.example.hotkitchentest.model.entity.Booking
 
 interface BookingService {

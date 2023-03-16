@@ -1,4 +1,4 @@
-package com.example.hotkitchentest.model.dto
+package com.example.hotkitchentest.model.dto.response
 
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity

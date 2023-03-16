@@ -1,19 +1,15 @@
 package com.example.hotkitchentest.utils
 
-import com.example.hotkitchentest.model.dto.ApiResponse
-import com.example.hotkitchentest.model.dto.InternalServerException
-import org.slf4j.LoggerFactory
+import com.example.hotkitchentest.model.dto.exception.ServerException
+import com.example.hotkitchentest.model.dto.response.ApiResponse
 import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
-import org.springframework.web.context.request.WebRequest
+import org.springframework.web.bind.annotation.RestControllerAdvice
 
-@ControllerAdvice
+@RestControllerAdvice
 class ExceptionResolver {
-    private val logger = LoggerFactory.getLogger(ExceptionResolver::class.java)
-    @ExceptionHandler(value =[Throwable::class])
-    fun handle(cause: Throwable, request: WebRequest): ResponseEntity<ApiResponse> {
-        logger.info(cause.stackTraceToString())
-        return InternalServerException().asResponse()
+    @ExceptionHandler
+    fun handle(exception: ServerException): ResponseEntity<String> {
+        return ResponseEntity(exception.message, exception.status)
     }
 }
